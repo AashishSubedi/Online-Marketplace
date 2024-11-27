@@ -1,0 +1,167 @@
+<!--Author Prajit Shrestha-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Product Page - Online Marketplace" />
+    <link rel="stylesheet" href="index-style.css" />
+    <title>Home Page</title>
+    <script>
+      // Check if the user is logged in
+      // Redirects users to login page if they're not logged in
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+        alert('You need to log in first!');
+        window.location.href = 'login.html';
+    }
+    </script>
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+        <!-- Navigation links for easy access to other pages -->
+        <a href="product.html">Product</a>
+        <a href="contact.html">Contact</a>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+    <!-- Main section for trending products -->
+    <div class="trending-new-arrival-container">
+        <div class="trending-left">
+        <h2>Our Products</h2>
+        <h3>(Click on the image to view our products)</h3>
+        <div class="product-info">
+            <!-- Product image wrapped in a link for navigation -->
+            <a href="product.html">
+            <img src="image/productpic-1.jpg" alt="Product Image" id="product-img" />
+            </a>
+            <div class="product-meta">
+            <p><strong>Price:</strong> Starting from $9.99 to $140</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <!-- Key features of the product -->
+                <li>Enhanced Comfort - Crafted with ultra-soft materials for all-day wear</li>
+                <li>Energy Efficient - Incorporates advanced technology to reduce energy consumption</li>
+                <li>Compact Design - Sleek, modern design fits seamlessly into any space</li>
+            </ul>
+            </div>
+        </div>
+        <!-- Buttons for purchase actions -->
+        <button id="add-to-cart">Add to Cart</button>
+        <button id="buy-now">Buy Now</button>
+        <section class="social-sharing">
+            <h3>Share This Product</h3>
+            <!-- Links to share the product on social media -->
+            <a href="https://www.facebook.com" target="_blank"><img src="image/facebook.jpg" alt="Share on Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="image/twitter.png" alt="Share on Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="image/instagram.png" alt="Share on Instagram"></a>
+        </section>
+        </div>
+    </div>
+
+    <!-- Section for product details with tab navigation -->
+    <section id="product-tabs">
+        <button class="tab" onclick="showTab('description')">Description</button>
+        <button class="tab" onclick="showTab('shipping')">Shipping & Returns</button>
+
+        <!-- Description tab -->
+        <div id="description" class="tab-content">
+          <p>
+            Elevate your everyday with "Our Product," the perfect fusion of style and functionality.
+            Crafted for comfort and designed for the eco-conscious, our product features ultra-soft materials,
+            advanced energy-saving technology, and a sleek, compact design that complements any space.
+          </p>
+        </div>
+        <!-- Shipping tab -->
+        <div id="shipping" class="tab-content" style="display: none">
+          <p>
+            Shipping and Returns Information: Free shipping on orders over $50. 30-day return policy.
+          </p>
+        </div>
+      </section>
+
+      <!-- New Arrivals section -->
+      <div class="new-arrivals-right">
+        <h2>New Arrivals</h2>
+        <section id="product-details">
+          <div class="product-info">
+            <img src="image/pic-1.jpg" alt="Product Image" id="product-img" />
+            <div class="product-meta">
+              <p><strong>Price:</strong> $9.99</p>
+              <p><strong>Features:</strong></p>
+              <ul>
+                <!-- Detailed features of the new arrival -->
+                <li>Advanced Fabric Technology - Ensures durability and comfort with eco-friendly materials</li>
+                <li>Optimal Fit Design - Tailored to enhance your silhouette, suitable for various body types</li>
+                <li>Weather Resistant - Ideal for any season, equipped with water and wind-resistant capabilities</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Buttons for purchase actions -->
+          <button id="add-to-cart">Add to Cart</button>
+          <button id="buy-now">Buy Now</button>
+          <section class="social-sharing">
+            <h3>Share This Product</h3>
+            <!-- Social media sharing options -->
+            <a href="https://www.facebook.com" target="_blank"><img src="image/facebook.jpg" alt="Share on Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="image/twitter.png" alt="Share on Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="image/instagram.png" alt="Share on Instagram"></a>
+        </section>
+        </section>
+    </div>
+
+    <!-- About section for company details -->
+    <div class="aboutContainer">
+        <h2>About</h2>
+        <div class="about-details-container">
+        <img src="image/about-pic.jpg" alt="Voile and Velours" class="about-img" />
+        <span>Explore premium fabrics at Voile & Velours, your online destination for voile and velvet materials. Perfect for fashion enthusiasts and designers, our curated selections promise quality, luxury, and timeless style. Whether crafting garments or decor, find your exquisite textures here.</span>
+        </div>
+    </div>
+
+    <!-- Upcoming products section -->
+<section id="upcoming">
+    <h3>Upcoming Products</h3>
+    <ul>
+        <!-- Placeholder images for upcoming products -->
+        <li>
+            <img src="image/coming-soon.jpg" alt="Coming soon Image" id="Coming-Soon-img" />
+            <h4>Coming Soon</h4>
+        </li>
+        <li>
+            <img src="image/coming-soon.jpg" alt="Coming soon Image" id="Coming-Soon-img" />
+            <h4>Coming Soon</h4>
+        </li>
+        <li>
+            <img src="image/coming-soon.jpg" alt="Coming soon Image" id="Coming-Soon-img" />
+            <h4>Coming Soon</h4>
+        </li>
+    </ul>
+</section>
+
+
+    <footer>
+    <!-- Footer for copyright and company details -->
+    <p>&copy; 2024 Voile & Velours. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Function to handle tab switching for product details
+    function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach((tab) => (tab.style.display = 'none')); // Hide all tabs
+        document.getElementById(tabId).style.display = 'block'; // Show the selected tab
+    }
+
+      // Placeholder for future search functionality
+    function handleSearch(query) {
+        console.log('Search Query:', query); // Log the search query to the console
+        // Add search functionality here
+    }
+    </script>
+</body>
+</html>

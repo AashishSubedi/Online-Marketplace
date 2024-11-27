@@ -1,0 +1,73 @@
+<!--Author Aashish Subedi-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login-style.css"> <!-- Link to external stylesheet for styling -->
+</head>
+<body>
+  <header>
+    <h1>Welcome to Voile & Velours</h1> <!-- Header displaying the website's name -->
+  </header>
+  <main>
+    <section class="login-section">
+      <h2>Login</h2>
+      <form id="login-form" novalidate> <!-- Login form without native HTML5 validation -->
+        <!-- Username Field -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required> <!-- Username input field -->
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required> <!-- Password input field -->
+
+        <!-- Submit Button -->
+        <button type="submit">Log In</button> <!-- Button to submit login form -->
+
+        <!-- Additional Links -->
+        <div class="links">
+          <!-- Placeholder links for password recovery and account creation -->
+          <a href="#" onclick="alert('Password recovery is under construction.')">Forgot Password?</a>
+          <a href="#" onclick="alert('Account creation is under construction.')">Create New Account</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Online Marketplace</p> <!-- Footer with copyright notice -->
+  </footer>
+
+  <script>
+    // Login Form Validation and Submission
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+      
+      const username = document.getElementById('username').value.trim(); // Get and trim username input
+      const password = document.getElementById('password').value.trim(); // Get and trim password input
+
+      // Check if both fields are filled
+      if (!username || !password) {
+        alert('Please fill in both fields.');
+        return; // Stop execution if fields are empty
+      }
+
+      // Placeholder credentials for demonstration purposes
+      const validCredentials = {
+        admin: 'password123', // Example admin credentials
+        user1: 'mypassword', // Example user credentials
+      };
+
+      // Validate username and password against the placeholder credentials
+      if (validCredentials[username] && validCredentials[username] === password) {
+        alert('Login successful!');
+        sessionStorage.setItem('isLoggedIn', 'true'); // Save login state in session storage
+        window.location.href = 'index.html'; // Redirect user to the homepage
+      } else {
+        alert('Invalid username or password.'); // Show error message for incorrect credentials
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* General Styles product-style Author: Aashish Subedi */
+body {
+  /* Sets the overall font, margin, padding, and background color for the page */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333; /* Ensures consistent text color across the page */
+}
+
+/* Header */
+header {
+  /* Creates a dark header with centered text and a slight shadow */
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  /* Adds padding, background, and hover effect to header links */
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: #555;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+header nav .cart-icon-container {
+  /* Styles the cart icon and text together for better alignment */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between cart icon and text */
+}
+
+/* Cart Icon */
+.cart-icon {
+  /* Ensures the cart icon is properly sized and aligned */
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#view-cart {
+  /* Styles the "View Cart" link as a button-like element */
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  gap: 5px;
+  margin-left: auto;
+}
+
+/* Main Content */
+main {
+  /* Centers the content and adds consistent padding */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Product Details */
+.product-details {
+  /* Flexible layout for displaying product details and images side by side */
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+  /* Ensures product images are responsive and rounded */
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.image-gallery img {
+  /* Thumbnail styling with hover effect for border highlight */
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.image-gallery img:hover {
+  /* Highlights the thumbnail on hover */
+  border-color: #007BFF;
+}
+
+.product-actions button {
+  /* Styles buttons for actions like "Add to Cart" or "Buy Now" */
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 1rem 0.5rem 0 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-actions button:hover {
+  /* Darkens the button color on hover */
+  background-color: #0056b3;
+}
+
+/* Cart Modal */
+.modal {
+  /* Styles for the cart modal with smooth fade-in effect */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.visible {
+  /* Makes the modal visible when triggered */
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  /* Styles the content of the modal */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content form {
+  /* Arranges form inputs vertically in the modal */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  /* Adds padding and border styling to form elements */
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Reviews Section */
+.customer-reviews {
+  /* Styles the reviews section as a card-like container */
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.review {
+  /* Adds spacing and border to individual reviews */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+/* Social Sharing */
+.social-sharing img {
+  /* Styles social media icons with hover effect */
+  width: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.social-sharing img:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
+footer {
+  /* Adds a simple, centered footer with consistent spacing */
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

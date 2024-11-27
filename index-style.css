@@ -1,0 +1,291 @@
+/* General Styles index-style Author Prajit Shrestha*/
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: #555;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: #555;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #007BFF;
+}
+
+/* Main Section Styles */
+main {
+  padding: 2rem;
+}
+
+/**menu css*/
+
+
+.menu_icon {
+  position: absolute;;
+  left: 5%;
+  top: 10%;
+  zoom: 10%;
+  z-index: 500;
+  height: 400px;
+  width: 400px;
+}
+
+.menu_icon_cb {
+  position: fixed;
+  left: 86%;
+  top: 333px;
+  zoom: 10%;
+  z-index: 6;
+  height: 400px;
+  width: 400px;
+  z-index: 500;
+}
+
+.menu_icon .common {
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+.mobile_menu_container {
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  background: black;
+  align-items: center;
+  justify-content: center;
+  z-index: 205;
+  transition: all 400ms ease;
+}
+
+#product-details {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  #product-details h2 {
+    text-align:center;
+  }
+  .product-info{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .trending-new-arrival-container{
+    flex-direction: column;
+    gap:10px;
+  }
+}
+
+.search-box-label{
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top:50px;
+  
+}
+
+.search-box-container{
+  margin-top:1.5rem;
+}
+
+.product-info img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.product-meta {
+  flex: 1;
+}
+
+.product-meta p {
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#social-sharing a {
+  margin: 0 0.5rem;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+#social-sharing a:hover {
+  text-decoration: underline;
+}
+
+/* Product Tabs Styles */
+#product-tabs {
+  margin: 0 auto 2rem auto;
+}
+
+.tab {
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.tab-content {
+  display: none;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  margin-top: -1px;
+  border-radius: 0 0 8px 8px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.about-img{
+  width: 10.25rem;
+  height: 10.25rem;
+  border-radius: 0.625rem;
+}
+.about-details-container{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+/* Media queries for responsive adjustments */
+@media screen and (max-width: 580px) {
+  .about-details-container{
+    flex-direction: column;
+  }
+}
+
+/* Upcoming Products Section */
+#upcoming {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centers the heading and images within the section */
+}
+
+#upcoming h3 {
+  margin-top: 0;
+  color: #333; /* Dark grey color for the heading */
+}
+
+#upcoming ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0; /* Adds space around the list */
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+#upcoming ul li {
+  max-width: 200px; /* Limits the width of each list item */
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+#upcoming img {
+  width: 100%; /* Makes the image fully responsive within the container */
+  height: auto; 
+  border-radius: 4px; /* Softens the corners of the images */
+}
+
+/* Social Sharing */
+.social-sharing {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-sharing img {
+  width: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.social-sharing img:hover {
+  opacity: 0.8;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
